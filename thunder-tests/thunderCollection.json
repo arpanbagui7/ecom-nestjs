@@ -1,0 +1,47 @@
+[
+  {
+    "_id": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "colName": "Ecom-apis",
+    "created": "2023-04-05T11:32:29.504Z",
+    "sortNum": 10000,
+    "folders": [
+      {
+        "_id": "6d847ec8-64a9-4026-baa5-53e5350d09f6",
+        "name": "Auth",
+        "containerId": "",
+        "created": "2023-04-05T11:33:09.492Z",
+        "sortNum": 10000
+      },
+      {
+        "_id": "0d9674a9-a6df-46e5-bb45-2830ad738840",
+        "name": "Product",
+        "containerId": "",
+        "created": "2023-04-06T06:41:28.136Z",
+        "sortNum": 20000
+      },
+      {
+        "_id": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+        "name": "Category",
+        "containerId": "",
+        "created": "2023-04-06T06:41:43.096Z",
+        "sortNum": 30000
+      },
+      {
+        "_id": "5b26f447-a93a-4e3f-bef4-42b70f57ce18",
+        "name": "Order",
+        "containerId": "",
+        "created": "2023-05-03T07:51:26.618Z",
+        "sortNum": 40000
+      }
+    ],
+    "settings": {
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{auth_token}}",
+          "isDisabled": true
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "a6e1b134-3a78-4803-8837-1ff827f44e89",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:5454/product/642e7096d542a4e45e6a6481?category=true",
+    "url": "http://localhost:5454/product/642e7096d542a4e45e6a6481?category=true",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-13T13:34:01.897Z",
+    "modified": "2023-04-13T13:34:01.897Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "category",
+        "value": "true",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  }
+]

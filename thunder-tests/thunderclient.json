@@ -1,0 +1,320 @@
+[
+  {
+    "_id": "58984641-b427-470e-b4d4-668504340b46",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "6d847ec8-64a9-4026-baa5-53e5350d09f6",
+    "name": "Sign In",
+    "url": "{{url}}/auth/signin",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-05T11:33:16.492Z",
+    "modified": "2023-04-12T06:07:14.145Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"customer1@gmail.com\",\n  \"password\": \"password123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8784670d-25b1-4f4c-9ece-81696e7cbbc7",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "6d847ec8-64a9-4026-baa5-53e5350d09f6",
+    "name": "Sign Up Admin",
+    "url": "{{url}}/auth/signup/admin",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2023-04-05T12:21:49.666Z",
+    "modified": "2023-04-05T15:19:36.070Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"testadmin2@gmail.com\",\n  \"password\": \"password123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f3009868-226f-40fa-b67a-09ad7ad7ba61",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "6d847ec8-64a9-4026-baa5-53e5350d09f6",
+    "name": "Sign Up User",
+    "url": "{{url}}/auth/signup/user",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-04-05T12:30:43.304Z",
+    "modified": "2023-04-05T13:37:32.889Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"customer1@gmail.com\",\n  \"password\": \"password123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "8ce985cd-be68-4d30-96e3-cb8584497c99",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "0d9674a9-a6df-46e5-bb45-2830ad738840",
+    "name": "Add Product",
+    "url": "{{url}}/product",
+    "method": "POST",
+    "sortNum": 50000,
+    "created": "2023-04-06T06:41:34.817Z",
+    "modified": "2023-04-06T09:35:54.611Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "name",
+          "value": "Cartoon Tshirt"
+        },
+        {
+          "name": "description",
+          "value": "A funky casual tshirt"
+        },
+        {
+          "name": "categoryId",
+          "value": "642e6a07570db15ee6364431"
+        }
+      ],
+      "files": [
+        {
+          "name": "image",
+          "value": "../../images/soul store-min.jpg"
+        }
+      ]
+    },
+    "tests": []
+  },
+  {
+    "_id": "18d04f06-0154-4e0e-8d44-3f73736645d1",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+    "name": "Add Category",
+    "url": "{{url}}/category",
+    "method": "POST",
+    "sortNum": 60000,
+    "created": "2023-04-06T06:41:50.187Z",
+    "modified": "2023-04-06T06:48:09.990Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Rain Collection\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "afd1f992-40eb-40bb-9c2a-6223e6940043",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+    "name": "Get Categories",
+    "url": "{{url}}/category?product=false",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2023-04-06T06:44:00.804Z",
+    "modified": "2023-04-06T10:16:40.043Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "product",
+        "value": "false",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "2af84d24-95c4-49c7-aa3a-83af774e1436",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+    "name": "Get Category By Id",
+    "url": "{{url}}/category/{id}?product=false",
+    "method": "GET",
+    "sortNum": 90000,
+    "created": "2023-04-06T06:44:44.595Z",
+    "modified": "2023-04-06T10:30:10.262Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}",
+        "isDisabled": true
+      }
+    ],
+    "params": [
+      {
+        "name": "id",
+        "value": "642e6a07570db15ee6364431",
+        "isPath": true
+      },
+      {
+        "name": "product",
+        "value": "false",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "0a4fc83f-f4b7-4e16-9b31-04f9efe822a2",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+    "name": "Update Category",
+    "url": "{{url}}/category/{id}",
+    "method": "PATCH",
+    "sortNum": 100000,
+    "created": "2023-04-06T06:45:57.109Z",
+    "modified": "2023-04-06T06:49:15.910Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "id",
+        "value": "642e6b29570db15ee6364434",
+        "isPath": true
+      }
+    ],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"description\": \"Rain Coats\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "622d2f3e-b4a6-4868-9b76-297a49ef2b90",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5a5e1315-f56f-435a-9f96-f2f1f7b415d2",
+    "name": "Delete Category",
+    "url": "{{url}}/category/{id}",
+    "method": "DELETE",
+    "sortNum": 120000,
+    "created": "2023-04-06T06:49:24.175Z",
+    "modified": "2023-04-06T06:49:54.907Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [
+      {
+        "name": "id",
+        "value": "642e6af6570db15ee6364433",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "2c284a90-0322-4ea7-ab0c-178caec264bd",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "0d9674a9-a6df-46e5-bb45-2830ad738840",
+    "name": "Get Products",
+    "url": "{{url}}/product?category=642e6b29570db15ee6364434",
+    "method": "GET",
+    "sortNum": 130000,
+    "created": "2023-04-06T09:35:30.650Z",
+    "modified": "2023-04-12T10:05:39.679Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "category",
+        "value": "642e6b29570db15ee6364434",
+        "isPath": false
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "1fc9fc62-3c7f-41e1-8514-19b65780c2ce",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "0d9674a9-a6df-46e5-bb45-2830ad738840",
+    "name": "Get Product By Id",
+    "url": "{{url}}/product/{id}",
+    "method": "GET",
+    "sortNum": 140000,
+    "created": "2023-04-13T11:12:41.621Z",
+    "modified": "2023-04-13T11:12:59.438Z",
+    "headers": [],
+    "params": [
+      {
+        "name": "id",
+        "value": "642e745dc07133069161b0d1",
+        "isPath": true
+      }
+    ],
+    "tests": []
+  },
+  {
+    "_id": "3d5285a3-d6e6-4b79-a90b-7e8cdfc9f694",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5b26f447-a93a-4e3f-bef4-42b70f57ce18",
+    "name": "Add Order",
+    "url": "{{url}}/order",
+    "method": "POST",
+    "sortNum": 150000,
+    "created": "2023-05-03T07:51:35.564Z",
+    "modified": "2023-05-03T09:29:53.694Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"orderAmt\": 6900,\n  \"products\": [\n    \n    {\n      \"price\": 1900,\n      \"productId\": \"642e72b0d542a4e45e6a6482\",\n      \"quantity\": 1\n    },\n    {\n      \"price\": 2500,\n      \"productId\": \"642e7310d542a4e45e6a6483\",\n      \"quantity\": 2\n    }\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "7e733130-00d7-4fe6-aca1-e551cf87741a",
+    "colId": "2b3e23d2-2573-409f-875c-4150838b2624",
+    "containerId": "5b26f447-a93a-4e3f-bef4-42b70f57ce18",
+    "name": "Get Orders",
+    "url": "{{url}}/order",
+    "method": "GET",
+    "sortNum": 160000,
+    "created": "2023-05-03T11:02:02.938Z",
+    "modified": "2023-05-03T11:08:39.980Z",
+    "headers": [
+      {
+        "name": "Authorization",
+        "value": "Bearer {{auth_token}}"
+      }
+    ],
+    "params": [],
+    "tests": []
+  }
+]
